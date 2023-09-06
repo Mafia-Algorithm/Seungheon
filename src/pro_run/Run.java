@@ -31,7 +31,7 @@ public class Run {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(
                 new String[]{"mumu", "soe", "poe", "kai", "mine"},
-                new String[]{"kai", "kai", "mine", "mine"}
+                new String[]{"kai", "kai", "mine"}
         )));
     }
 }
