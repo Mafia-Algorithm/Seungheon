@@ -31,11 +31,3 @@ public class TwoCircle {
         System.out.println(solution(2, 3));
     }
 }
-
-/*
-r = 1 -> 0
-r = 2 -> 1
-r = 3 -> 4
-r = 4 -> 8
-r = 5 -> 15
- */
