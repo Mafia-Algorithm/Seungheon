@@ -2,7 +2,7 @@ package pro_string;
 
 public class Application {
     public static void main(String[] args) {
-        NumberOfDigitPlus numberOfDigitPlus = new NumberOfDigitPlus();
-        System.out.println(numberOfDigitPlus.solution(930211));
+        StringSplit stringSplit = new StringSplit();
+        System.out.println(stringSplit.solution("aaabbaccccabba"));
     }
 }
