@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        ChickenCoupon chickenCoupon = new ChickenCoupon();
-        System.out.println(chickenCoupon.solution(1081));
+        Kcount kcount = new Kcount();
+        System.out.println(kcount.solution(1, 13, 1));
     }
 }
