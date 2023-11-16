@@ -1,12 +1,13 @@
 package pro_realization;
 
+import java.util.Arrays;
+
 public class Application {
     public static void main(String[] args) {
-        CardDummy cardDummy = new CardDummy();
-        System.out.println(cardDummy.solution(
-                new String[]{"i", "drink", "water"},
-                new String[]{"want", "to"},
-                new String[]{"i", "want", "to", "drink", "water"}
-        ));
+        BestLottoWorstLotto bestLottoWorstLotto = new BestLottoWorstLotto();
+        System.out.println(Arrays.toString(bestLottoWorstLotto.solution(
+                new int[]{44, 1, 0, 0, 31, 25},
+                new int[]{31, 10, 45, 1, 6, 19}
+        )));
     }
 }
