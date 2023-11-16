@@ -2,7 +2,11 @@ package pro_realization;
 
 public class Application {
     public static void main(String[] args) {
-        ThreeSixNine threeSixNine = new ThreeSixNine();
-        System.out.println(threeSixNine.solution(1234567789));
+        CardDummy cardDummy = new CardDummy();
+        System.out.println(cardDummy.solution(
+                new String[]{"i", "drink", "water"},
+                new String[]{"want", "to"},
+                new String[]{"i", "want", "to", "drink", "water"}
+        ));
     }
 }
