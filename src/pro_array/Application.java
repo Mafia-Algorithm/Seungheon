@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        FindBiggestNumber findBiggestNumber = new FindBiggestNumber();
-        System.out.println(Arrays.toString(findBiggestNumber.solution(new int[]{9, 10, 11, 8})));
+        MockTest mockTest = new MockTest();
+        System.out.println(Arrays.toString(mockTest.solution(new int[]{1, 2, 3, 4, 5})));
     }
 }
