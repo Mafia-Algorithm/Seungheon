@@ -4,7 +4,10 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        MockTest mockTest = new MockTest();
-        System.out.println(Arrays.toString(mockTest.solution(new int[]{1, 2, 3, 4, 5})));
+        RowColumnPlus rowColumnPlus = new RowColumnPlus();
+        System.out.println(Arrays.deepToString(rowColumnPlus.solution(
+                new int[][] {{1, 2}, {2, 3}},
+                new int[][] {{3, 4}, {5, 6}}
+        )));
     }
 }
