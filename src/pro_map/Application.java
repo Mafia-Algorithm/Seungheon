@@ -2,14 +2,10 @@ package pro_map;
 
 public class Application {
     public static void main(String[] args) {
-        LoginSuccess loginSuccess = new LoginSuccess();
-        System.out.println(loginSuccess.solution(
-                new String[]{"programmer01", "15789"},
-                new String[][]{
-                        {"programmer02", "111111"},
-                        {"programmer00", "134"},
-                        {"programmer01", "1145"}
-                }
+        PersonalityType personalityType = new PersonalityType();
+        System.out.println(personalityType.solution(
+                new String[]{"AN", "CF", "MJ", "RT", "NA"},
+                new int[]{5, 3, 2, 7, 5}
         ));
     }
 }
