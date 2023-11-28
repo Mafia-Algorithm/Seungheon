@@ -2,7 +2,7 @@ package pro_set;
 
 public class Application {
     public static void main(String[] args) {
-        MostFrequentValue mostFrequentValue = new MostFrequentValue();
-        System.out.println(mostFrequentValue.solution(new int[]{1, 1, 2, 2}));
+        Phonekemon phonekemon = new Phonekemon();
+        System.out.println(phonekemon.solution(new int[]{3,3,3,2,2,2}));
     }
 }
