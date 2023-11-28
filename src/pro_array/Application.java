@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        RowColumnPlus rowColumnPlus = new RowColumnPlus();
-        System.out.println(Arrays.deepToString(rowColumnPlus.solution(
-                new int[][] {{1, 2}, {2, 3}},
-                new int[][] {{3, 4}, {5, 6}}
+        BestAlbum bestAlbum = new BestAlbum();
+        System.out.println(Arrays.toString(bestAlbum.solution(
+                new String[]{"classic", "pop", "classic", "classic", "pop"},
+                new int[]{500, 600, 150, 800, 2500}
         )));
     }
 }
