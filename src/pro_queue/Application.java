@@ -4,7 +4,10 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        TurnArray turnArray = new TurnArray();
-        System.out.println(Arrays.toString(turnArray.solution(new int[]{4, 455, 6, 4, -1, 45, 6}, "left")));
+        FeatureDevelop featureDevelop = new FeatureDevelop();
+        System.out.println(Arrays.toString(featureDevelop.solution(
+                new int[]{95, 90, 99, 99, 80, 99},
+                new int[]{1, 1, 1, 1, 1, 1}
+        )));
     }
 }
