@@ -1,13 +1,11 @@
 package pro_heap;
 
-import java.util.Arrays;
-
 public class Application {
     public static void main(String[] args) {
-        HallOfFame hallOfFame = new HallOfFame();
-        System.out.println(Arrays.toString(hallOfFame.solution(
-                3,
-                new int[]{10, 100, 20, 150, 1, 100, 200}
-        )));
+        MoreSpicy moreSpicy = new MoreSpicy();
+        System.out.println(moreSpicy.solution(
+                new int[]{1, 2, 3, 9, 10, 12},
+                7
+        ));
     }
 }
