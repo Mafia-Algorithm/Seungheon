@@ -1,8 +1,12 @@
 package pro_dfs;
 
+import java.util.Arrays;
+
 public class Application {
     public static void main(String[] args) {
-        Collatz collatz = new Collatz();
-        System.out.println(collatz.solution(626331));
+        TravelRoutine travelRoutine = new TravelRoutine();
+        System.out.println(Arrays.toString(travelRoutine.solution(
+                new String[][]{{"ICN", "AAA"},{"ICN", "CCC"},{"CCC", "DDD"},{"AAA", "BBB"},{"AAA", "BBB"},{"DDD", "ICN"},{"BBB", "AAA"}}
+        )));
     }
 }
