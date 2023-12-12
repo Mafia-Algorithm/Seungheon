@@ -1,12 +1,15 @@
 package pro_dfs;
 
-import java.util.Arrays;
-
 public class Application {
     public static void main(String[] args) {
-        TravelRoutine travelRoutine = new TravelRoutine();
-        System.out.println(Arrays.toString(travelRoutine.solution(
-                new String[][]{{"ICN", "AAA"},{"ICN", "CCC"},{"CCC", "DDD"},{"AAA", "BBB"},{"AAA", "BBB"},{"DDD", "ICN"},{"BBB", "AAA"}}
-        )));
+        Network network = new Network();
+        System.out.println(network.solution(
+                3,
+                new int[][]{
+                        {1, 1, 0},
+                        {1, 1, 1},
+                        {0, 1, 1}
+                }
+        ));
     }
 }
