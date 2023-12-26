@@ -2,7 +2,11 @@ package pro_greedy;
 
 public class Application {
     public static void main(String[] args) {
-        AntArmy antArmy = new AntArmy();
-        System.out.println(antArmy.solution(999));
+        WorkoutClothes workoutClothes = new WorkoutClothes();
+        System.out.println(workoutClothes.solution(
+                5,
+                new int[]{2, 4},
+                new int[]{3}
+        ));
     }
 }
