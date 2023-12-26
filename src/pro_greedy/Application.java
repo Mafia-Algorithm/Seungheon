@@ -2,11 +2,14 @@ package pro_greedy;
 
 public class Application {
     public static void main(String[] args) {
-        WorkoutClothes workoutClothes = new WorkoutClothes();
-        System.out.println(workoutClothes.solution(
-                5,
-                new int[]{2, 4},
-                new int[]{3}
+        Camera camera = new Camera();
+        System.out.println(camera.solution(
+                new int[][] {
+                        {-20,-15},
+                        {-14,-5},
+                        {-18,-13},
+                        {-5,-3}
+                }
         ));
     }
 }
