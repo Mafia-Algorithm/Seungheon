@@ -1,13 +1,12 @@
 package pro_realization;
 
-import java.util.Arrays;
-
 public class Application {
     public static void main(String[] args) {
-       CharacterPoint characterPoint = new CharacterPoint();
-        System.out.println(Arrays.toString(characterPoint.solution(
-                new String[]{"left", "right", "up", "right", "right"},
-                new int[]{11, 11}
-        )));
+       PaintOver paintOver = new PaintOver();
+       System.out.println(paintOver.solution(
+               8,
+               4,
+               new int[]{2, 3, 6}
+       ));
     }
 }
