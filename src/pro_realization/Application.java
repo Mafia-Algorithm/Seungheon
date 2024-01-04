@@ -1,15 +1,13 @@
 package pro_realization;
 
+import java.util.Arrays;
+
 public class Application {
     public static void main(String[] args) {
-       Parallel parallel = new Parallel();
-        System.out.println(parallel.solution(
-                new int[][] {
-                        {1, 2},
-                        {2, 1},
-                        {3, 4},
-                        {4, 5}
-                }
-        ));
+       CharacterPoint characterPoint = new CharacterPoint();
+        System.out.println(Arrays.toString(characterPoint.solution(
+                new String[]{"left", "right", "up", "right", "right"},
+                new int[]{11, 11}
+        )));
     }
 }
