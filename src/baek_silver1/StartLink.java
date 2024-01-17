@@ -54,18 +54,19 @@ public class StartLink {
         MIN = Math.min(val, MIN);
     }
 
-//    public static void main(String[] args) throws IOException {
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//
-//        N = Integer.parseInt(br.readLine());
-//        statusBoard = new int[N][N];
-//        for (int i = 0; i < N; i++) {
-//            statusBoard[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-//        }
-//
-//        isIn = new boolean[N];
-//
-//        combination(0, 0);
-//        System.out.println(MIN);
-//    }
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N = Integer.parseInt(br.readLine());
+        statusBoard = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            statusBoard[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        }
+
+        isIn = new boolean[N];
+
+        combination(0, 0);
+        System.out.println(MIN);
+    }
 }
