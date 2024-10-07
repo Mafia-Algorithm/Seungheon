@@ -9,25 +9,32 @@ public class Boggle {
 	private static int[] dx = {0, 0, -1, -1, -1, 1, 1, 1};
 	private static int[] dy = {1, -1, 0, -1, 1, 0, -1, 1};
 
-	private static void checkGetWordInBoard (int x, int y, String current, int target) {
-		if (current.equals(words[target])) {
-			canGetWord[target] = 1;
+	private static boolean inRange(int x, int y) {
+
+		if (0 <= x && x < 5 && 0 <= y && y < 5) return true;
+		else return false;
+	}
+
+	private static boolean hasWord(int x, int y, String target) {
+
+		// 범위를 벗어난 경우
+		if (!inRange(x, y)) return false;
+
+		// 첫 글자가 일치하지 않는 경우
+		if (!board[x][y].equals(String.valueOf(target.charAt(0)))) return false;
+
+		// 단어 길이가 1이면 성공
+		if (target.length() == 1) return true;
+
+		// 인접한 8칸을 검사
+		for (int direction = 0; direction < 8; direction++) {
+			int nextX = x + dx[direction];
+			int nextY = y + dy[direction];
+
+			if (hasWord(nextX, nextY, target.substring(1))) return true;
 		}
 
-		String targetWord = words[target];
-
-		if (current.length() >= targetWord.length()) {
-			return;
-		}
-
-		for (int i = 0; i < 8; i++) {
-			int nextX = x + dx[i];
-			int nextY = y + dy[i];
-
-			if (0 <= nextX && nextX < 5 && 0 <= nextY && nextY < 5 && board[nextX][nextY].equals(String.valueOf(targetWord.charAt(current.length())))) {
-				checkGetWordInBoard(nextX, nextY, current + board[nextX][nextY], target);
-			}
-		}
+		return false;
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -50,12 +57,10 @@ public class Boggle {
 
 			for (int i = 0; i < words.length; i++) {
 				String word = words[i];
-				char firstAlphabet = word.charAt(0);
-				System.out.println(word + " " + firstAlphabet);
 				for (int j = 0; j < 5; j++) {
 					for (int k = 0; k < 5; k++) {
-						if (String.valueOf(firstAlphabet).equals(board[j][k])) {
-							checkGetWordInBoard(j, k, board[j][k], i);		
+						if (hasWord(j, k, word)) {
+							canGetWord[i] = 1;
 						}
 					}
 				}
