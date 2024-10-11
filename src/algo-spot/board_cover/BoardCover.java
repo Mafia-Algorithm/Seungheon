@@ -39,11 +39,10 @@ public class BoardCover {
 					x = i;
 					y = j;
 					break;
-				}
-			
-				if (x != -1) {
-					break;
-				}
+				}	
+			}
+			if (x != -1) {
+				break;
 			}
 		}
 
