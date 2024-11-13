@@ -7,18 +7,16 @@ public class BinomialCoefficient {
 	static long[] modArray;
 
 	static long fastPow(long base, int exp, int mod) {
-        long result = 1;
-
-        while (exp > 0) {
-            if ((exp & 1) == 1) {
-                result = ((long) result * base % mod);
-            }
-            base = ((long) base * base % mod);
-            exp >>= 1;
-        }
-
-        return result;
-    }
+		if (exp == 0) {
+			return 1;
+		}
+		if (exp % 2 == 0) {
+			long half = fastPow(base, exp / 2, mod);
+			return (half * half) % mod;
+		} else {
+			return (base * fastPow(base, exp - 1, mod)) % mod;
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
 
